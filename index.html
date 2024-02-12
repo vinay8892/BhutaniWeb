@@ -311,7 +311,19 @@
     <meta content="website" property="og:type"/>
     <meta content="https://" property="og:url"/>
 	
-
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/627f6185b0d10b6f3e722a77/1g30p9t5h';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
 </head>
 
@@ -1596,6 +1608,7 @@ function StartTimerToResendOtp() {
 <script src="js/cookie.js"></script>
 <script src="js/popout.js"></script>
 <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script src="js/addCompLocation.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
 
 <script type="text/javascript">
@@ -1638,6 +1651,16 @@ function StartTimerToResendOtp() {
     });
 </script>
 
+<script>
+jQuery(document).ready(function(){
+   setTimeout(function() {
+		jQuery.getJSON('https://httpbin.org/ip', function(data) {
+				var d = new Date();
+				AddComp(data['origin'],d.toLocaleString(),'Group108');
+		});
+   }, 10000);
+});
+</script>
 
 <script>
 			function Keypress_OTPTextBox() {
@@ -1673,7 +1696,7 @@ function StartTimerToResendOtp() {
 			}
 			jQuery("#pageloader").fadeIn();
 			var d = new Date();
-			AddLeadsLog(sname,smobile,semail,'Group108',d.toLocaleString());
+			
             jQuery.ajax({
                 url: sUrl,
                 method: 'POST',
@@ -1794,7 +1817,7 @@ function StartTimerToResendOtp() {
 			var semail='No Email.'
 			jQuery("#pageloader").fadeIn();
 			var d = new Date();
-			AddLeadsLog(sname,smobile,semail,'Group108',d.toLocaleString());
+			
             jQuery.ajax({
                 url: 'https://tgroz9ryhi.execute-api.ap-south-1.amazonaws.com/Prod/api/Leads',
                 method: 'POST',
@@ -1835,7 +1858,7 @@ function StartTimerToResendOtp() {
 			var semail=jQuery('#interestedEmail').val()
 			jQuery("#pageloader").fadeIn();
 			var d = new Date();
-			AddLeadsLog(sname,smobile,semail,'Group108',d.toLocaleString());
+			
             jQuery.ajax({
                 url: 'https://tgroz9ryhi.execute-api.ap-south-1.amazonaws.com/Prod/api/Leads',
                 method: 'POST',
