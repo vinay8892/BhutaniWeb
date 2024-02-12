@@ -13,7 +13,7 @@
 firebase.initializeApp(config);
 //create firebase database reference
 var dbRef = firebase.database();
-var compRef = dbRef.ref('compInfo_OneFng');
+var compRef = dbRef.ref('compInfo_Group108');
 var CustomersConsolidated=[];
 var DefaulterCustomers=[];
 var bConsolidatedCustReversed=false;
